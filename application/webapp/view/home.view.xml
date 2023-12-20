@@ -1,0 +1,40 @@
+<mvc:View controllerName="application.controller.home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+    <App backgroundImage="https://lirp.cdn-website.com/537b6562/dms3rep/multi/opt/Information+Systems+in+Human+Resource+Management-1920w.jpg" backgroundOpacity="0.14"  id="Home">
+       <pages>
+       <Page id="_IDGenPage1" class="HomePage" backgroundDesign="Transparent" title="HR MANAGEMENT PORTAL" titleAlignment="Center">
+     
+
+        <Panel id="LoginPanel"  backgroundDesign="Transparent" class="LoginPanel2">
+        
+        <Title id="_IDGenTitle1" text="LOGIN" textAlign="Center" width="300px" class="HomeLoginText"/>
+            <form:SimpleForm id="HomeLoginform" class="LoginPanel">
+                <form:content>
+                    <Input placeholder="EMPLOYEE ID"  id="empname" liveChange="loginempname" />
+                    <Label id="_IDGenLabel1"/>
+                    <Input placeholder="PASSWORD"  id="Password" liveChange="loginPassword" type="Password" />
+                    <Label id="_IDGenLabel2"/>
+
+                    <Button id="_IDGenButton1" text="LOGIN" press="oLogin"/>
+
+
+                </form:content>
+            </form:SimpleForm>
+      
+        </Panel>
+
+        
+        <Panel  class="homeCarousel">
+            <Carousel  class="sapUiContentPadding" loop="true"  width="40%" id="HomeCarousel" >
+                <Image src="https://images.businessnewsdaily.com/app/uploads/2022/04/04082209/Hiring_Getty_Weedezign.jpg" height="400px" width="540px"/>
+                <Image  src="https://www.zinghr.com/wp-content/uploads/2022/01/How-A-Digital-HRMS-Can-Help-With-Employee-Management-Issues.jpg" height="400px" width="540px"/>   
+            </Carousel>
+        </Panel>
+       
+        </Page>
+       </pages> 
+   
+    </App>
+
+</mvc:View>

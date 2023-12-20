@@ -1,0 +1,45 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:u="sap.ui.unified"
+>
+ <Dialog>
+     <beginButton>
+         
+     </beginButton>
+     <buttons>
+     </buttons>
+     <content>
+       
+	<l:VerticalLayout>
+		<u:Calendar
+				id="calendar1"
+				select="handleCalendarSelect1" />
+		<Button
+				press="handleSelectToday1"
+				text="Select Today" />
+		<l:HorizontalLayout>
+			<Label
+					text="Selected Date is : "
+					class="labelMarginLeft" />
+			<!-- <Text
+					id="selectedDate1"
+				
+					class="labelMarginLeft"/> -->
+		</l:HorizontalLayout>
+	</l:VerticalLayout>
+
+
+    
+
+     </content>
+     <customHeader>
+     </customHeader>
+     <endButton>
+        <Button text="close" press="onCloseto"></Button>
+     </endButton>
+     <subHeader>
+     </subHeader>
+ </Dialog>
+</c:FragmentDefinition>

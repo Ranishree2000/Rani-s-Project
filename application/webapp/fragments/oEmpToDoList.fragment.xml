@@ -1,0 +1,30 @@
+<c:FragmentDefinition xmlns:form="sap.ui.layout.form"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:u="sap.ui.unified"
+>
+ <Dialog>
+     <beginButton>
+         
+     </beginButton>
+     <buttons>
+     </buttons>
+     <content>
+       <form:SimpleForm editable="true">
+        <Input placeholder="Enter the Task Name"/>
+        <Label/>
+        <Button text="Submit" type="Emphasized" press=""/>
+       </form:SimpleForm>
+     </content>
+     <customHeader>
+        <Bar >
+            <contentRight>
+                <Button text="close" press="oEmpToDolistClose"/>
+            </contentRight>
+        </Bar>
+     </customHeader>
+
+    
+ </Dialog>
+</c:FragmentDefinition>

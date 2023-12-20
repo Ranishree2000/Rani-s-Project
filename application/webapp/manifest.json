@@ -1,0 +1,196 @@
+{
+  "_version": "1.40.0",
+  "sap.app": {
+    "id": "application",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.6.7",
+      "toolsId": "41dc6116-2b2e-4c9c-a182-9a691f2508d0"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZRS_HR_PORTAL_FRONTED_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "fullWidth": true
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.102.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "application.i18n.i18n"
+        }
+      },
+      "":{
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      },
+      "leaveData": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data.json"
+      },
+      "allEmpRecords":{
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/allEmpRecords.json"
+      },
+      "notify":{
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/notify.json"
+      },
+      "approvedLeave":{
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/approvedLeave.json"
+      },
+      "profile":{
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/profile.json"
+
+      },
+      "approvedLeaves":{
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/approvedLeaves.json"
+
+      },
+      "profilePic":{
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/profilePic.json"
+      },
+      "allEmpNotification":{
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/allEmpNotification.json"
+      },
+      "empTempNotify":{
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/empTempNotify.json"
+      },
+      "singleEmpNotify":{
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/singleEmpNotify.json"
+      },
+      "time":{
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/time.json"
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "application.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "Routehome",
+          "pattern": ":?query:",
+          "target": [
+            "Targethome"
+          ]
+        },
+        {
+          "name": "RouteHRPage",
+          "pattern": "RouteHRPage",
+          "target": [
+            "TargetHRPage"
+          ]
+        },
+        {
+          "name": "RouteEmpPage",
+          "pattern": "RouteEmpPage/{id1}",
+          "target": [
+            "TargetEmpPage"
+          ]
+        }
+      ],
+      "targets": {
+        "Targethome": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "home",
+          "viewName": "home"
+        },
+        "TargetHRPage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "HRPage",
+          "viewName": "HRPage"
+        },
+        "TargetEmpPage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "EmpPage",
+          "viewName": "EmpPage"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "application.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

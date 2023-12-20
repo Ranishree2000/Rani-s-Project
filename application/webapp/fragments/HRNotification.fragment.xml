@@ -1,0 +1,135 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core">
+
+<Dialog id="_IDGenDialoghrnotify1"
+    contentHeight="300px"
+    contentWidth="700px" >
+    <customHeader>
+
+        <Bar
+    
+            design="Auto">
+    
+           
+    
+            <contentMiddle>
+                <Text text="HR LEAVE NOTIFICATIONS" class="alignitem" />
+            </contentMiddle>
+    
+            <contentRight>
+    
+        <Button icon="sap-icon://decline" press="hrNotifyCloseButton" />
+    
+            </contentRight>
+    
+        </Bar>        
+    
+        </customHeader>
+
+<content>
+    
+    <!-- <NotificationListGroup  title="All Notifications" items="{notify>/data}"            
+        >
+            <items>
+                <NotificationListItem
+                    authorAvatarColor="Accent6"
+                    authorInitials=""
+                    description="{notify>remarks}"
+                    hideShowMoreButton="true"
+                    truncate="true"
+                    title="{notify>EmpID}"
+                    close="oNotificationClose"
+                    
+                >
+                    <processingMessage>
+                        <MessageStrip
+                            text="{notify>leaveType}+'  '+'NO Of Days : '+{notify>NoOfDays}"/>
+                      
+                    </processingMessage>
+                    <buttons>
+                         <Button text="Approve" press="ApproveLeave"/>
+                         <Button text="Reject" press="RejectLeave"/>
+                    </buttons>
+                    
+                </NotificationListItem>
+            </items>
+        </NotificationListGroup> -->
+    
+
+<Table items="{notify>/data}" id="idHrNotifyTable">
+    
+    <columns>
+        <Column>
+            <Text text="EMP ID"/>
+        </Column>
+
+        <Column>
+            <Text text="NO OF DAYS"/>
+        </Column>
+
+        <Column>
+            <Text text="REMARKS"/>
+        </Column>
+
+        <Column>
+            <Text text="APPROVE"/>
+        </Column>
+
+        <Column>
+            <Text text="REJECT"/>
+           
+        </Column>
+       
+    </columns>
+
+        <items>
+            <ColumnListItem
+                vAlign="Inherit"
+            >
+                <cells>
+                    <Text text="{notify>EmpID}"/>
+                </cells>
+
+                <cells>
+                    <Text text="{notify>NoOfDays}"/>
+                </cells>
+
+                <cells>
+                    <!-- <Text text="{notify>leaveType}"/> -->
+                    <Text text="{notify>Remarks}"/>
+                </cells>
+
+               
+
+                <cells>
+                    <Button text="Approve"   press="ApproveLeave" type="Accept" />
+
+
+                </cells>
+                
+                <cells>
+                    <Button text="Reject"  press="RejectLeave" type="Negative"/>
+
+
+                </cells>
+
+            </ColumnListItem>
+        </items>
+</Table>
+          
+           
+       
+
+
+
+
+
+</content>
+    
+
+
+    
+</Dialog>
+
+</c:FragmentDefinition>

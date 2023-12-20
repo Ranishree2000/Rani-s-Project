@@ -1,0 +1,118 @@
+<mvc:View
+	controllerName="application.controller.HRPage"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:tab="sap.ui.table"
+>
+<App backgroundImage="https://undsgn.com/wp-content/uploads/2018/04/ltotbngnzzu-uai-1600x900.jpg" backgroundOpacity="0.5">
+    <Page enableScrolling="false" backgroundDesign="Transparent">
+        <customHeader>
+        <Toolbar>
+            <content>
+                <Bar>
+                    <contentMiddle>
+                        <Text text="HR SERVICE"/>
+                    </contentMiddle>
+                    <contentRight>
+                        
+                    <Button icon="sap-icon://bell" type="Emphasized"  press="onNotify"/>
+
+                    <Button icon="sap-icon://log" type="Emphasized" press="onLogOut"/>
+                    </contentRight>
+                </Bar>
+            </content>
+        </Toolbar>
+        </customHeader>
+
+
+        <content>
+            <SlideTile class="sapUiLargeMarginBeginEnd sapUiMediumMarginTop" transitionTime="950" displayTime="3000">
+                <GenericTile
+                    backgroundImage="https://img.freepik.com/premium-photo/asian-musician-playing-guitar-black-background-with-spot-light_38052-71.jpg"
+                    frameType="TwoByOne" press="pressOnTileOne">
+                
+                <TileContent footer="Moni Party hall, B-Block">
+                    <NewsContent
+                        contentText="All Teams are welcome to the Freshers party"
+                        subheader="With Vijay Prakash's live concert" />
+                </TileContent>
+            </GenericTile>
+
+            <GenericTile
+                backgroundImage="https://watermark.lovepik.com/photo/50092/7457.jpg_wh1200.jpg"
+                frameType="TwoByOne" press="pressOnTileOne">
+            <TileContent footer="Team Out">
+                <NewsContent
+                    contentText="hey guys, let's get together with beautiful moments with your employees "
+                    subheader="in Gohantara Resort Bangalore" />
+            </TileContent>
+        </GenericTile>
+        </SlideTile>
+            
+        <GenericTile header="{path: 'time>/date', formatter: '.TimeFormatter'}" frameType="TwoByHalf" class="sapUiLargeMarginBeginEnd sapUiMediumMarginTop">
+           <TileContent >
+                <Text text="{time>/time}" class="timerTile"></Text>
+           </TileContent>
+                    
+        </GenericTile>
+
+
+        <GenericTile class="sapUiLargeMarginBeginEnd sapUiMediumMarginTop" frameType="TwoByOne" backgroundImage="https://t4.ftcdn.net/jpg/03/61/01/89/360_F_361018944_HkcCYRsgv14bXoe8MEYxfQoZEG39rdry.jpg">
+            <TileContent >
+                <GenericTile header="To Do List" frameType="TwoByOne" class="ToDoListPanel" >
+                    
+                </GenericTile>
+            </TileContent>
+        </GenericTile>
+           
+
+        <GenericTile press="AddEmployee"  frameType="TwoByOne" class="sapUiLargeMarginBeginEnd sapUiMediumMarginTop" backgroundImage="https://thumbs.dreamstime.com/z/background-image-group-corporate-employees-office-lobby-business-177682443.jpg">
+            <TileContent >
+                <GenericTile header="Add Employee" frameType="TwoByOne" class="AddEmptPanel" >
+                    
+                </GenericTile>
+            </TileContent>
+                    
+        </GenericTile>
+
+        <GenericTile press="onReadEmpData"  frameType="TwoByOne" class="sapUiLargeMarginBeginEnd sapUiMediumMarginTop" backgroundImage="https://www.darubiniscreening.com/images/demo/services/background2.jpg">
+            <TileContent >
+                <GenericTile header="All Employees" frameType="TwoByOne" class="AllEmpPanel" >
+                    
+                </GenericTile>
+            </TileContent>
+                    
+        </GenericTile>
+
+
+        <GenericTile  frameType="TwoByOne" class="sapUiLargeMarginBeginEnd sapUiMediumMarginTop" backgroundImage="https://www.ukibc.com/wp-content/uploads/2015/08/Hiring-staff.jpg" >
+            <TileContent>
+                <tab:Table rows="{allEmpRecords>/data}" columnHeaderVisible="false" columnHeaderHeight="0" editable="false" enableSelectAll="false" selectionMode="None" visibleRowCount="2" >
+                    <tab:columns>
+                        <tab:Column>
+                           
+                           
+                            <tab:template>
+                                <Text text="{allEmpRecords>EmpId} : {allEmpRecords>EmpName} "></Text>
+                               
+                            </tab:template>
+                             
+                          
+                        </tab:Column>
+                    </tab:columns>
+                    </tab:Table>
+            </TileContent>
+                    
+        </GenericTile>
+            
+        </content>
+        <footer>
+        </footer>
+    </Page>
+</App>
+</mvc:View>

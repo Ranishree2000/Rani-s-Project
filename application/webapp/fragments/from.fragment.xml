@@ -1,0 +1,81 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:u="sap.ui.unified"
+    xmlns:me="sap.me"
+>
+ <Dialog
+     closeOnNavigation="true"
+     contentHeight="800PX"
+     contentWidth=""
+     draggable="false"
+     escapeHandler=""
+     horizontalScrolling="true"
+     icon=""
+     resizable="false"
+     showHeader="true"
+     state="None"
+     stretch="false"
+     title=""
+     titleAlignment="Auto"
+     type="Standard"
+     verticalScrolling="true"
+ >
+     <customHeader>
+
+        <Bar design="Auto">
+    
+            <contentRight>
+    
+            <Button icon="sap-icon://decline" press="onCloseFrom" />
+  
+            </contentRight>
+    
+        </Bar>        
+    
+        </customHeader>
+     <content>
+       
+	<!-- <l:VerticalLayout>
+		<u:Calendar
+				id="calendar"
+				select="handleCalendarSelect" />
+		<Button
+				press="handleSelectToday"
+				text="Select Today" />
+              
+		<l:HorizontalLayout>
+		
+
+		</l:HorizontalLayout>
+	</l:VerticalLayout> -->
+
+    <me:Calendar id="selectionCalendar"
+    selectionMode="RANGE"
+    tapOnDate="onTapOnDate"
+    changeRange="onChangeRange"
+    width="640px"/>
+    
+    <!-- <RadioButton text="Range Selection" select="changeToRangeSelectionMode" groupName="selectionGroup"/> -->
+    <!-- <RadioButton text="Multi Selection" select="changeToMultiSelectionMode" groupName="selectionGroup"/>
+    <RadioButton text="Single Selection" select="changeToSingleSelectionMode" groupName="selectionGroup" -->
+    <!-- selected="true"/> -->
+    <List
+                id="selectedDatesList"
+                noDataText="No Dates Selected"
+                headerText="Selected Dates"
+                items="{path: '/selectedDates'}">
+            <StandardListItem
+                    title="{Date}"/>
+        </List>
+     </content>
+     <customHeader>
+     </customHeader>
+     <endButton>
+        <Button text="SET" type="Emphasized" press="SetDateValidation"/>
+     </endButton>
+     <subHeader>
+     </subHeader>
+ </Dialog>
+</c:FragmentDefinition>

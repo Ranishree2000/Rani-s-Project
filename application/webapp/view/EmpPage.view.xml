@@ -1,0 +1,132 @@
+<mvc:View
+	controllerName="application.controller.EmpPage"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+    xmlns:form="sap.ui.layout.form"
+>
+<App>
+<Page titleAlignment="Center">
+    <customHeader>
+        
+        <Bar>
+            <contentLeft>
+                
+            </contentLeft>
+            <contentMiddle>
+                <Title text="HR MANAGEMENT PORTAL"/>
+            </contentMiddle>
+            <contentRight>
+                
+            <Button icon="sap-icon://bell"  type="Emphasized" press="onEmpNotify"/>
+
+            <Button icon="sap-icon://log" type="Emphasized" press="onEmpLogout"/>
+
+            </contentRight>
+        </Bar>
+  
+</customHeader>
+<SplitApp>
+    <masterPages>
+        <Panel class="UserProfile" backgroundDesign="Transparent"
+                height="300px" 
+                width="250px">
+                <content>
+                    <!-- <Text text="Welcome"/> -->
+
+                    <Image src="{profilePic>/img}" width="100px" height="100px" class="ProfileImage" id="profilePic"/>
+                    <Label/>
+                        <Text id="idEmpNameText" text="{allEmpRecords>/EmpName}" class="ProfileName" />
+                        <Text id="idEmpIdText" text="{allEmpRecords>/EmpId}" class="ProfileEmpId"/>
+                        <Button type="Transparent" text="Edit Profile" class="ProfileEdit" press="onPressUserProfile"/>
+                        
+
+                </content>
+                
+            </Panel>
+    </masterPages>
+    <detailPages> 
+<App>
+    <Page enableScrolling="false" titleAlignment="Center">
+    
+        <customHeader>
+            <Bar >
+                <contentMiddle >
+                    <Text text="EMPLOYEE SERVICE" class="empService" ></Text>
+                </contentMiddle>
+                
+            </Bar>
+        </customHeader>
+
+        <content>
+            <SlideTile class="sapUiLargeMarginBeginEnd sapUiMediumMarginTop" transitionTime="950" displayTime="3000">
+                <GenericTile
+                backgroundImage="https://img.freepik.com/premium-photo/asian-musician-playing-guitar-black-background-with-spot-light_38052-71.jpg"
+                frameType="TwoByOne" press="pressOnTileOne">
+                
+                <TileContent footer="Moni Party hall, B-Block">
+                    <NewsContent
+                        contentText="All Teams are welcome to the Freshers party"
+                        subheader="With Vijay Prakash's live concert" />
+                        
+                </TileContent>
+            </GenericTile>
+
+
+            <GenericTile
+            backgroundImage="https://watermark.lovepik.com/photo/50092/7457.jpg_wh1200.jpg"
+            frameType="TwoByOne" press="pressOnTileOne">
+            <TileContent footer="Team Out">
+                <NewsContent
+                    contentText="hey guys, let's get together with beautiful moments with your employees "
+                    subheader="in Gohantara Resort Bangalore" />
+            </TileContent>
+        </GenericTile>
+        </SlideTile>
+
+        
+        <GenericTile press="oEmpToDoList" class="sapUiLargeMarginBeginEnd sapUiMediumMarginTop" frameType="TwoByOne" backgroundImage="https://t4.ftcdn.net/jpg/03/61/01/89/360_F_361018944_HkcCYRsgv14bXoe8MEYxfQoZEG39rdry.jpg">
+            <TileContent >
+                <GenericTile header="To Do List" frameType="TwoByOne" class="ToDoListPanel" >
+                    
+                </GenericTile>
+            </TileContent>
+        </GenericTile>
+
+
+        <GenericTile class="sapUiLargeMarginBeginEnd sapUiMediumMarginTop" frameType="TwoByOne" backgroundImage="https://akriviahcm.com/wp-content/uploads/2022/01/Salary-slip.png">
+            <TileContent >
+                <GenericTile header="Salary information" frameType="TwoByOne" class="PaySlipsPanel" >
+
+                </GenericTile>
+            </TileContent>
+        </GenericTile>
+        
+        </content>
+       
+    </Page>
+</App>
+    </detailPages>
+
+</SplitApp>
+<footer>
+    <Bar>
+        <contentLeft>
+           
+        </contentLeft>
+        <contentMiddle>
+           
+        </contentMiddle>
+        <contentRight>
+        
+            <Button press="oLeaveInfo" text="LEAVES-INFO" type="Emphasized"/>
+            <Button text="APPLY LEAVE" type="Emphasized" press="ApplyLeave"/>
+        </contentRight>
+    </Bar>
+</footer>
+</Page>
+</App>
+</mvc:View>

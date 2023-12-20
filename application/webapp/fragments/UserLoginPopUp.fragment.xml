@@ -1,0 +1,82 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:file="sap.ui.unified"
+   
+>
+<Dialog
+    contentHeight="600px"
+    contentWidth="800px"
+   
+    >
+
+    <beginButton>
+        
+    </beginButton>
+    <buttons>
+
+    </buttons>
+    <customHeader>
+
+        <Bar
+    
+            design="Auto">
+    
+           
+    
+            <contentMiddle>
+                <Text text="PERSONAL DETAILS" class="addempperson" />
+            </contentMiddle>
+    
+            <contentRight>
+    
+        <Button icon="sap-icon://decline" press="UserLoginCloseButton" />
+    
+    
+    
+            </contentRight>
+    
+        </Bar>        
+    
+        </customHeader>
+
+    <content >
+
+
+          <VBox width="50%">
+                            
+
+                        <form:SimpleForm id="idSimpleForm1" editable="true">
+                                <Label text="Name"/>
+                                <Input value="{allEmpRecords>EmpName}" id="a" editable="false"/>
+                                <Label text="EMP_ID"/>
+                                <Input value="{allEmpRecords>EmpId}" id="b" editable="false"/>
+                                <Label text="Email"/>
+                                <Input value="{allEmpRecords>EmpEmail}" id="c" editable="false"/>
+                                <Label text="Blood Group"/>
+                                <Input value="{allEmpRecords>EmpBloodGroup}" id="d" editable="false"/>
+                                <Label text="Phone"/>
+                                <Input value="{allEmpRecords>EmpPhone}" type="Number" id="e" editable="false"/>
+                                <Label text="Profile Image" class="FormLabels"/>
+                                <file:FileUploader   placeholder="img" uploadOnChange="true" change='ProfileImagePicked' id="ProfilePickUploader"/>
+                                <Button text="Upload"  press='UploadProfileImage'/>
+                                <Button text="save" width="70px"  class="save" press="onPressButton"/>
+                               
+                        </form:SimpleForm>
+                       </VBox>
+             
+            
+   <GenericTile frameType='TwoByOne' id="GenericTilebackground" class="UploadedImage"/>
+        
+   
+    </content>
+    <!-- <customHeader>
+    </customHeader>
+    <endButton>
+        <Button text="Close" type="Emphasized" press="UserLoginCloseButton"/>
+    </endButton>
+    <subHeader>
+    </subHeader> -->
+</Dialog>
+</c:FragmentDefinition>

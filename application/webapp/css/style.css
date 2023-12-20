@@ -1,0 +1,279 @@
+/* Enter your custom styles here */
+
+/* Enter your custom styles here */
+
+.HomeHeader{
+    display: flex;
+    justify-content: end;
+    
+}
+#SignupForm{
+    position: relative;
+    left: -50px;
+    top: 30px;
+}
+.SignupFragment{
+    background-color: red;
+    
+}
+.FormLabels{
+    color: black;
+    font-weight: bold;
+}
+.c{
+
+    position: relative;
+    left: 200px;
+    top: 20px;
+    font-weight: bold;
+
+}
+.LoginPanel{
+    border: 1px solid ;
+    width: 300px;
+    position: relative;
+    /* top: 50px; */
+    left: 510px;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 0px 3px 3px grey;
+    
+}
+.LoginPanel2{
+    position: absolute;
+    left: -20%;
+    top: 22%;
+}
+.HomeLoginText{
+    position: relative;
+    left: 510px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+::placeholder{
+    letter-spacing: 3px;
+    position: relative;
+    left: 50px;
+}
+
+
+.ToDoListButton{
+    position: relative;
+    top: 25px;
+    left: 255px;
+}
+.ToDoListPanel{
+    background-color: rgba(255, 0, 0, 0.395);
+}
+.NewsFeedPanel{
+    position: absolute;
+    top: -2px;
+    left: 420px;
+    margin-top: 60px;
+    border-radius: 8px;
+    /* border: 1px solid; */
+    margin-left: 80px;
+    box-shadow: 0px 0px 2px 2px;
+}
+.EventText{
+    margin: 5px 5px;
+    display: block;
+}
+.UploadVideoPanel{
+    position: absolute;
+    top: 200px;
+    left: 415px;
+    margin-top: 60px;
+    border-radius: 8px;
+    /* border: 1px solid; */
+    margin-left: -360px;
+    box-shadow: 0px 0px 2px 2px;
+}
+.UploadVideoPanel1{
+    position: absolute;
+    top:0px;
+    left: 1305px;
+    margin-top: 60px;
+    border-radius: 8px;
+    /* border: 1px solid; */
+    margin-left: -360px;
+    box-shadow: 0px 0px 2px 2px;
+}
+.ViewEmpButton{
+    position: relative;
+    top: 40px;
+    left: 280px;
+}
+.DeleteEmpButton{
+    position: relative;
+    top: 50px;
+    left: 270px;
+}
+.ViewEmpPanel{
+
+    position: relative;
+    top: -243px;
+    left: 440px;
+    margin-top: 60px;
+    border-radius: 8px;
+    /* border: 1px solid; */
+    margin-left: 60px;
+    box-shadow: 0px 0px 2px 2px;
+
+}
+.DeleteEmpPanel{
+    position: relative;
+    top: -486px;
+    left: 880px;
+    margin-top: 60px;
+    border-radius: 8px;
+    /* border: 1px solid; */
+    margin-left: 60px;
+    box-shadow: 0px 0px 2px 2px;
+
+}
+
+.PopUpLeave{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* padding: 20px 20px; */
+}
+.align{
+    position: relative;
+  left: 540px;
+}
+.alignitem{
+    position: relative;
+    left: 230px;
+}
+.addempitem{
+    position: relative;
+    left: 190px;
+}
+.addempitem1{
+    position: relative;
+    left: 370px;
+}
+.addempperson{
+    position: relative;
+    left: 310px;
+}
+.setPassword{
+    position: relative;
+  left: 210px;
+  top: 40px;
+}
+
+/* .remarksHeight{
+    height: 500px;
+    width: 200px;
+} */
+
+.UserProfile{
+    position: relative;
+    
+    margin-left: 30px;
+    margin-top: 30px;
+    /* width: 100px;
+    min-height: 400px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.25),inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+    border-radius: 30px;
+}
+.ProfileImage{
+    margin-top: 5px;
+    position: relative;
+    left: 57px;
+}
+.ProfileName{
+    font-size: 18px;
+    position: relative;
+    /* left: -47px; */
+    top: 35px;
+    /* background-color: aqua; */
+    width: 350px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-left: 20px;
+
+}
+.ProfileEmpId{
+    font-size: 15px;
+    position: relative;
+    /* left: 59px; */
+    top: 45px;
+    /* background-color: red; */
+    width: 450px;
+    padding-left: 20px;
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+}
+.ProfileEdit{
+    /* background-color: aqua; */
+    font-size: 12px;
+    position: relative;
+    left: 59px;
+    /* left: -19px; */
+    top: 90px;
+    padding-left: 80px;
+    color: blue;
+    text-decoration: underline;
+
+
+}
+.UploadedImage{
+    margin-left: 20px;
+    position: absolute;
+    top: 90px;
+    left: 390px;
+}
+.leaveTypeText{
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    left: 36%;
+    top: 20px;
+}
+
+.appLeave{
+    position: relative;
+    left: 200px;
+}
+
+.save{
+    position: relative;
+ margin-top: 20px;
+  left: 150px;
+}
+.AddEmptPanel{
+    background-color: rgba(255, 255, 255, 0.753);
+}
+.AllEmpPanel{
+    background-color: rgba(255, 255, 255, 0.753);
+}
+.homeCarousel{
+    position: absolute;
+    left: 50%;
+    top: 5%;
+}
+.PaySlipsPanel{
+    background-color: rgba(240, 240, 240, 0.753);
+}
+.LastEmployeesAdded{
+    
+  background-color: red;
+}
+.timerTile{
+    color: rgb(0, 34, 255);
+    font-size: 22px;
+   
+}

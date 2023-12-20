@@ -1,0 +1,45 @@
+<c:FragmentDefinition xmlns:form="sap.ui.layout.form"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<Dialog state="Information" contentWidth="450px" >
+    <content>
+        <form:SimpleForm editable="true" id="idReadSimpleForm">
+            
+            <Input id="EmpIdView"  enabled="false" value="{allEmpRecords>EmpId}" />
+            <Label />
+            <Input id="EmpNameView"  value="{allEmpRecords>EmpName}"/>
+            <Label />
+            <Input id="EmpPhoneView" value="{allEmpRecords>EmpPhone}"/>
+            <Label />
+            <Input id="EmpMailView" value="{allEmpRecords>EmpEmail}"/>
+            <Label />
+            <Input id="EmpAgeView" value="{allEmpRecords>EmpAge}"/>
+            <Label />
+            <Input id="EmpDesiView"  enabled="false" value="{allEmpRecords>EmpDesignation}"/>
+            <Label />
+            <Input id="EmpBloodView"  enabled="false" value="{allEmpRecords>EmpBloodGroup}"/>
+
+                <Label ></Label><Button text="Update" id="idUpdateButton" press="onUpdate" width="200px"></Button>
+                <Button text="Delete" id="idDeleteButton" press="onDeletePopUp"></Button>
+
+        </form:SimpleForm>
+    </content>
+    <customHeader>
+        <Bar >
+            <contentLeft>
+                <Title text="EDIT-EMPLOYEE"/>
+                    
+                
+            </contentLeft>
+            <contentRight>
+                <Button icon="sap-icon://decline" press="oEmpViewFargmentClose"></Button>
+            </contentRight>
+        </Bar>
+    </customHeader>
+
+    <!-- <buttons>
+        <Button text="Save" press="oSaveEmpdata"></Button>
+    </buttons> -->
+</Dialog>
+</c:FragmentDefinition>

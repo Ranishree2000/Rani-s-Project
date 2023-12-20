@@ -1,0 +1,73 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    
+>
+<Dialog id="_IDGenDialoghrnotification"
+    contentHeight="300px"
+    contentWidth="700px"
+  
+    horizontalScrolling="true"
+    
+   >
+    <customHeader>
+
+        <Bar>       
+    
+            <contentMiddle>
+                <Text text="LEAVE NOTIFICATIONS" class="alignitem" />
+            </contentMiddle>
+    
+            <contentRight>
+    
+                <Button icon="sap-icon://decline" press="empNotifyCloseButton" />
+    
+            </contentRight>
+    
+        </Bar>        
+    
+        </customHeader>
+
+
+
+        <Table mode="Delete" delete="oEmpNotifDelet" items="{empTempNotify>/data}">
+            <columns>
+               <Column ></Column> 
+               <Column ></Column> 
+               <Column ></Column>
+               <Column ></Column> 
+        
+            </columns>
+            <items>
+                <ColumnListItem >
+                   <cells>
+                    <Text text="{empTempNotify>Empid}"></Text>
+                    
+                   </cells>
+
+                   <cells>
+                  
+                    <ObjectStatus text="{empTempNotify>status}" state="{path: 'empTempNotify>status',formatter: '.StatusFormatter'}"></ObjectStatus>
+                    
+                   </cells>
+
+                   <cells>
+                    <Text text="{empTempNotify>leaveType}"></Text>
+                    
+                   </cells>
+
+                   <cells>
+                    <Text text="{empTempNotify>Days}"></Text>
+                    
+                   </cells>
+                   
+                </ColumnListItem>
+            </items>
+        </Table>
+
+       
+</Dialog>
+
+</c:FragmentDefinition> 
+ 

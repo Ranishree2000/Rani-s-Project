@@ -1,0 +1,92 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:tab="sap.ui.table" 
+
+>
+<Dialog id="_IDGenDialog1"
+    contentHeight="800px"
+    contentWidth="100%"
+    title="EMPLOYEE DETAILS"
+    titleAlignment="Center" >
+    
+    <Table id="_IDGenTable1" items="{allEmpRecords>/}" >
+           <columns>
+            <Column id="_IDGenColumn12">
+                <Text id="_IDGenText18" text="EMP ID"/>
+            </Column>
+
+               <Column id="_IDGenColumn1">
+                   <Text id="_IDGenText1" text="EMP NAME"/>
+               </Column>
+
+               <Column id="_IDGenColumn2">
+                   <Text id="_IDGenText2" text="EMP PHONE NUMBER"/>
+               </Column>
+
+               <Column id="_IDGenColumn3">
+                    <Text id="_IDGenText3" text="EMP EMAIL"/>
+                </Column>
+
+               <Column id="_IDGenColumn4">
+                   <Text id="_IDGenText4" text="EMP AGE"/>
+               </Column>
+
+               <Column id="_IDGenColumn5">
+                <Text id="_IDGenText15" text="EMP DESIGNATION"/>
+                </Column>
+
+                <Column id="_IDGenColumn6">
+                    <Text id="_IDGenText16" text="EMP BLOOD GROUP"/>
+                </Column>
+
+            <!-- <Column >
+                <SearchField>
+                   
+                </SearchField>
+            </Column> -->
+               
+           </columns>
+
+           <items>
+            <ColumnListItem id="_IDGenColumnListItem1">
+            <cells>
+                <Text id="_IDGenText51" text="{allEmpRecords>userId}"/>
+            </cells>
+                <cells>
+                    <Text id="_IDGenText5" text="{allEmpRecords>name}"/>
+                </cells>
+
+                <cells>
+                    <Text id="_IDGenText6" text="{allEmpRecords>phone}"/>
+                </cells>
+                
+
+                <cells>
+                    <Text id="_IDGenText7" text="{allEmpRecords>email}"/>
+                </cells>
+
+                <cells>
+                    <Text id="_IDGenText9" text="{allEmpRecords>age}"/>
+                </cells>
+
+                <cells>
+                    <Text id="_IDGenText17" text="{allEmpRecords>designation}"/>
+                </cells>
+                <cells>
+                    <Text id="_IDGenText27" text="{allEmpRecords>bloodgroup}"/>
+                </cells>
+                
+            </ColumnListItem>
+           </items>
+       </Table>
+
+       <customHeader>
+        
+       </customHeader>
+<endButton>
+        <Button id="_IDGenButton2" text="Close" type="Emphasized" press="viewEmpCloseButton"/>
+    </endButton>
+</Dialog>
+</c:FragmentDefinition>

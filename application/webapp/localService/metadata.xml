@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<edmx:Edmx xmlns:sap="http://www.sap.com/Protocols/SAPData" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+
+
+<edmx:DataServices m:DataServiceVersion="2.0">
+
+
+<Schema xml:lang="en" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" sap:schema-version="1" Namespace="ZRS_HR_PORTAL_FRONTED_SRV">
+
+
+<EntityType sap:content-version="1" Name="ZRS_LOGIN_TAB">
+
+
+<Key>
+
+<PropertyRef Name="EmpId"/>
+
+</Key>
+
+<Property Name="EmpId" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Employee Id" sap:unicode="false" MaxLength="7" Nullable="false" Type="Edm.String"/>
+
+<Property Name="EmpName" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Employee name" sap:unicode="false" MaxLength="40" Nullable="false" Type="Edm.String"/>
+
+<Property Name="EmpPhone" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Employee Phone Num" sap:unicode="false" MaxLength="10" Nullable="false" Type="Edm.String"/>
+
+<Property Name="EmpEmail" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Employee Email" sap:unicode="false" MaxLength="30" Nullable="false" Type="Edm.String"/>
+
+<Property Name="EmpAge" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Employee age" sap:unicode="false" MaxLength="2" Nullable="false" Type="Edm.String"/>
+
+<Property Name="EmpDesignation" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Employee Design" sap:unicode="false" MaxLength="30" Nullable="false" Type="Edm.String"/>
+
+<Property Name="EmpBloodGroup" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Employee Bg" sap:unicode="false" MaxLength="20" Nullable="false" Type="Edm.String"/>
+
+<Property Name="EmpPassword" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="EmpLoyee Password" sap:unicode="false" MaxLength="16" Nullable="false" Type="Edm.String"/>
+
+<Property Name="EmpCasualLeave" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Employee Casual Leave" sap:unicode="false" MaxLength="2" Nullable="false" Type="Edm.String"/>
+
+<Property Name="EmpSickLeave" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Employee Sick Leave" sap:unicode="false" MaxLength="2" Nullable="false" Type="Edm.String"/>
+
+<Property Name="EmpLeaveBalance" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Employee Leave Balance" sap:unicode="false" MaxLength="2" Nullable="false" Type="Edm.String"/>
+
+</EntityType>
+
+
+<EntityContainer Name="ZRS_HR_PORTAL_FRONTED_SRV_Entities" sap:supported-formats="atom json xlsx" m:IsDefaultEntityContainer="true">
+
+<EntitySet sap:content-version="1" Name="ZRS_LOGIN_TABSet" sap:updatable="false" sap:creatable="false" sap:pageable="false" sap:deletable="false" EntityType="ZRS_HR_PORTAL_FRONTED_SRV.ZRS_LOGIN_TAB"/>
+
+
+<FunctionImport Name="SelectByDesignation" m:HttpMethod="GET" EntitySet="ZRS_LOGIN_TABSet" ReturnType="Collection(ZRS_HR_PORTAL_FRONTED_SRV.ZRS_LOGIN_TAB)">
+
+<Parameter Name="EmpDesignation" Type="Edm.String" Mode="In"/>
+
+</FunctionImport>
+
+</EntityContainer>
+
+<atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://S4HANA.IDES.COM:9222/sap/opu/odata/SAP/ZRS_HR_PORTAL_FRONTED_SRV/$metadata" rel="self"/>
+
+<atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://S4HANA.IDES.COM:9222/sap/opu/odata/SAP/ZRS_HR_PORTAL_FRONTED_SRV/$metadata" rel="latest-version"/>
+
+</Schema>
+
+</edmx:DataServices>
+
+</edmx:Edmx>

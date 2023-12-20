@@ -1,0 +1,13 @@
+<c:FragmentDefinition xmlns:form="sap.ui.layout.form"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<Dialog title="You want to Delete?">
+    <content>
+        <form:SimpleForm editable="true">
+            <Button press="onDelete" type="Negative" text="Delete"/>
+         <Button press="oCloseDeleteProup" type="Neutral" text="Cancel"/>
+        </form:SimpleForm>
+    </content>
+</Dialog>
+</c:FragmentDefinition>

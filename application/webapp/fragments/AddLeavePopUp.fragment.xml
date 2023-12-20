@@ -1,0 +1,114 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:form="sap.ui.layout.form">
+<Dialog
+    contentHeight="400px"
+    contentWidth="900px">
+
+    <beginButton>
+        
+    </beginButton>
+    <buttons>
+
+    </buttons>
+    <customHeader>
+
+        <Bar
+    
+            design="Auto">
+    
+           
+    
+            <contentMiddle>
+                <Title text="LEAVE SECTION" class="addempitem1" titleAlignment="Center"/>
+            </contentMiddle>
+    
+            <contentRight>
+    
+        <Button icon="sap-icon://decline" press="AddLeaveCloseButton" />
+    
+    
+    
+            </contentRight>
+    
+        </Bar>        
+    
+        </customHeader>
+    <content >
+
+       
+        <SplitApp id="_IDGenSplitApp14" >
+
+        <masterPages>
+                <Page title="SELECT LEAVE TYPE" titleAlignment="Center">
+                    <ComboBox   placeholder="--Select--" required="true"  id="Leavetype" width="100%" >
+                        <items >
+                            <c:Item key="leave"
+                                text="Sick Leave"/>
+                            <c:Item key="leave"
+                                text="Casual Leave" />
+                        </items>
+                </ComboBox>
+                </Page>
+                
+  
+            
+        </masterPages>
+
+        
+                <detailPages>
+                    <Page id="_IDGenPage21"> 
+
+                        <customHeader>
+                            <Bar
+                                design="Auto"
+                                titleAlignment="None">
+                                <contentLeft>
+                                    <Label text="Sick Leave"/><Text text="{approvedLeave>/sickleave}"/>
+                                </contentLeft>
+                                <contentMiddle>
+                                    <Label text="Casual Leave"/><Text text="{approvedLeave>/casualleave}"/>
+                                </contentMiddle>
+                                <contentRight>
+                                    <Label text="Total Leave"/><Text text="{approvedLeave>/Leavebalance}"/>
+                                </contentRight>
+                            </Bar>
+                        </customHeader>
+        
+    <form:SimpleForm id="DetailsData" editable="true" layout="ResponsiveGridLayout">
+                                
+     <Button
+                            activeIcon=""
+                            ariaHasPopup="None"
+                            enabled="true"
+                            
+                            text="From"
+                         press="OnClickPressFrom"
+                            width="100px"
+                           id= "SelectDateButtonValidation"
+                        >   
+                        </Button>
+                                              
+                        <TextArea id="leaveRemarks"  height="60px" width="50%"/>
+                    
+                        <Button text="Apply" press="onPressApplyLeaveButton" class="appLeave"  width="100px">
+
+                        </Button>
+
+                          <Label/>
+                          <Label/>
+
+                       
+                        </form:SimpleForm>
+                        
+                    </Page>
+                
+                    </detailPages>
+
+    </SplitApp>
+           
+    </content>
+    
+</Dialog>
+</c:FragmentDefinition>

@@ -1,0 +1,109 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:form="sap.ui.layout.form">
+
+<Dialog id="_IDGenDialog111"
+    contentHeight="400px"
+    contentWidth="">
+
+<customHeader>
+
+    <Bar design="Auto">
+
+        <contentMiddle>
+            <Text text="ADD EMPLOYEE DETAILS" class="addempitem" />
+        </contentMiddle>
+
+        <contentRight>
+            <Button icon="sap-icon://decline" press="onClose" />
+        </contentRight>
+    </Bar>        
+    </customHeader>
+             <form:SimpleForm editable="true" id="SignupForm" width="600px"  class="sapUiTinyMargin" >
+                <Label  text="Name" class="FormLabels"/><Input placeholder="Name"   id="UserName" liveChange="Addname" width="240px" required="true"/>
+                <Label  text="Phone" class="FormLabels"/><Input placeholder="Phone number" type="Number" id="UserPhone"  liveChange="Addphone" width="240px" required="true"/>
+                <Label  text="Email" class="FormLabels"/><Input placeholder="Email" type="Email" id="UserEmail"  liveChange="Addemail" width="240px" required="true"/>
+                <Label text="Age" class="FormLabels"/> <Input placeholder="Age" type="Number" id="UserAge" liveChange="Addage" width="240px" required="true"/>
+                <Label text="Designation" class="FormLabels"/>
+                <ComboBox placeholder="--Select--"
+                required="true" id="UserDesignation" width="240px">
+                        <items >
+                            <c:Item key="designaiton"
+                                text="Developer"
+                            />
+                            <c:Item key="designaiton"
+                                text="Tester"
+                            />
+                            <c:Item key="designaiton"
+                                text="Data Engineer"
+                            />
+                            <c:Item key="designaiton"
+                            text="Customer service Associate"
+                            />
+                            <c:Item key="designaiton"
+                            text="Product Engineer"
+                            />
+                            <c:Item key="designaiton"
+                            text="Clerk"
+                            />
+                            <c:Item key="designaiton"
+                            text="Consultant"
+                            />
+                            <c:Item key="designaiton"
+                            text="System Engineer"
+                            />
+                        </items>
+                </ComboBox>
+                
+                
+                <Label text="Blood Group" class="FormLabels"/>
+                    <ComboBox  placeholder="--Select--"
+                            id="UserBloodGroup"  width="240px">
+                        <items>
+                            <c:Item key="Blood Group"
+                                text="O+"
+                            />
+                            <c:Item key="Blood Group"
+                                text="AB+"
+                            />
+                            <c:Item key="Blood Group"
+                                text="O-"
+                            />
+                            <c:Item key="Blood Group"
+                                text="A+"
+                            />
+                            <c:Item key="Blood Group"
+                                text="AB-"
+                            />
+                            <c:Item key="Blood Group"
+                                text="A-"
+                            />
+                            <c:Item key="Blood Group"
+                            text="Dont Know"
+                            />
+                        </items>
+                    </ComboBox>
+                <Label  />
+    
+            <Button  text="ADD" class="SignupCreateButton" press="AddEmpData" type="Emphasized" width="240px"/>
+        </form:SimpleForm>
+
+
+        <Panel visible="false" id="IdPanel" backgroundDesign="Transparent">
+            <MessageStrip
+                design="Positive"
+                class="sapUiMediumMarginBottom"
+                close="handleClose" id="UserIdText">
+            </MessageStrip>
+
+
+            <MessageStrip
+                design="Positive"
+                class="sapUiMediumMarginBottom"
+                close="handleClose1" id="EmpIdPass" >
+            </MessageStrip>
+                
+        </Panel>   
+    </Dialog>
+</c:FragmentDefinition>

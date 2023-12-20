@@ -1,0 +1,66 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:u="sap.ui.unified"
+>
+
+ <Dialog >
+    <content>
+        <Table items="{singleEmpNotify>/data}" id="AllEmpLeavesData">
+            <columns>
+                <Column >
+                    <Text text="EMP_ID"/>
+                </Column>
+
+                <Column >
+                    <Text text="LEAVE-TYPE"/>
+                </Column>
+
+                <Column >
+                    <Text text="STATUS" />
+                </Column>
+
+                <Column >
+                    <Text text="DAYS-COUNT"/>
+                </Column>
+
+                <!-- <Column >
+                    <Text text="DATE"/>
+                </Column> -->
+            </columns>
+
+            <items>
+                <ColumnListItem >
+                    <cells>
+                        <Text text="{singleEmpNotify>Empid}"/>
+                    </cells>
+
+                    <cells>
+                        <Text text="{singleEmpNotify>leaveType}"/>
+                    </cells>
+                    
+                    <cells>
+                        <Text text="{singleEmpNotify>status}"/>
+                    </cells>
+
+                    <cells>
+                        <Text text="{singleEmpNotify>Days}" />
+                    </cells>
+
+                    <cells>
+                        <Text text="{approvedLeaves>}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </content>
+   <customHeader>
+    <Bar >
+        <contentRight>
+            <Button icon="sap-icon://decline" press="oEmpleaveInfoClose"/>
+        </contentRight>
+    </Bar>
+   </customHeader>
+ </Dialog>
+</c:FragmentDefinition>

@@ -1,0 +1,126 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:tab="sap.ui.table" 
+
+>
+<Dialog id="_IDGenDialog3112"
+    contentHeight="800px"
+    contentWidth="100%"
+    titleAlignment="Center">
+<customHeader>
+
+    <Bar>
+
+       <contentLeft>
+        <Text text="EMPLOYEE DETAILS" class="align" />
+       </contentLeft>
+
+        <contentMiddle>
+            
+            <SearchField width="450px" placeholder="Search your employees" change="liveSearch" liveChange="onLiveSearch"></SearchField>
+        </contentMiddle>
+
+        <contentRight>
+
+            <Button icon="sap-icon://delete" press="onDeleteMultiData"></Button>
+            
+            <Button icon="sap-icon://decline" press="oEmpClose" />
+
+
+
+        </contentRight>
+
+    </Bar>        
+
+    </customHeader>
+
+    <!-- <ComboBox items="{allEmpRecords>/data}">
+        <c:Item key="{allEmpRecords>EmpDesignation}" text="{allEmpRecords>EmpDesignation}"></c:Item>
+    </ComboBox> -->
+
+    <Select id="designationsearchid" change="onPressDesignation" >
+        <items>
+        <c:Item text="--Select Designation--" key="SELECT"></c:Item>
+        <c:Item text="Developer" key="Developer"></c:Item>
+        <c:Item text="Tester" key="Tester"></c:Item>                            
+        <c:Item text="CONSULTANT" key="CONSULTANT"></c:Item>                            
+        <c:Item text="SYSTEM ENGINEER" key="SYSTEM ENGINEER"></c:Item>                            
+        <c:Item text="SALES MANAGER" key="SALES MANAGER"></c:Item>                            
+        <c:Item text="CLERK" key="CLERK" ></c:Item>                            
+        </items>
+    </Select>
+    
+    
+    <Table id="idDataTable"  items="{allEmpRecords>/data}" mode="MultiSelect" selectionChange="onEmpDelete">
+           <columns>
+            <Column >
+                <Text  text="EMP ID"/>
+            </Column>
+
+               <Column >
+                   <Text text="EMP NAME"/>
+               </Column>
+
+               <Column >
+                   <Text  text="EMP PHONE NUMBER"/>
+               </Column>
+
+               <Column >
+                <Text  text="EMP EMAIL"/>
+            </Column>
+
+               <Column >
+                   <Text  text="EMP AGE"/>
+               </Column>
+
+               <Column >
+                <Text  text="EMP DESIGNATION"/>
+            </Column>
+            <Column >
+                <Text text="EMP BLOOD GROUP"/>
+            </Column>
+
+               
+           </columns>
+
+           <items>
+            <ColumnListItem type="Active" press="oEmpDetailView">
+                
+                    <cells>
+                        <Text text="{allEmpRecords>EmpId}"/>
+                    </cells>
+            
+                <cells>
+                    <Text  text="{allEmpRecords>EmpName}"/>
+                </cells>
+
+                <cells>
+                    <Text  text="{allEmpRecords>EmpPhone}"/>
+                </cells>
+                
+
+                <cells>
+                    <Text  text="{allEmpRecords>EmpEmail}"/>
+                </cells>
+
+                <cells>
+                    <Text  text="{allEmpRecords>EmpAge}"/>
+                </cells>
+
+                <cells>
+                    <Text text="{allEmpRecords>EmpDesignation}"/>
+                </cells>
+                <cells>
+                    <Text text="{allEmpRecords>EmpBloodGroup}"/>
+                </cells>
+                
+                
+
+                
+            </ColumnListItem>
+           </items>
+       </Table>
+</Dialog>
+</c:FragmentDefinition>
